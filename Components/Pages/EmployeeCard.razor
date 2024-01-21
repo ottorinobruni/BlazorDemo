@@ -1,0 +1,17 @@
+﻿<div class="card" style="width: 18rem; margin-bottom: 16px;padding: 16px;">
+    <div class="card-text text-center">
+        <img src="https://robohash.org/@EmployeeId" class="card-img-top rounded-circle"
+            style="width: 100px; height: 100px; object-fit: cover;background-color: cyan">
+    </div>
+    <div class="card-body">
+        <h5 class="card-title text-center"><b>@FullName</b></h5>
+        <h6 class="card-text"><b>ID</b>: <small>@EmployeeId</small></h6>
+        <h6 class="card-text"><b>Email</b>: <small>@Email</small></h6>
+    </div>
+</div>
+
+@code {
+    [Parameter] public string FullName { get; set; } = "";
+    [Parameter] public int EmployeeId { get; set; } = 0;
+    [Parameter] public string Email { get; set; } = "";
+}

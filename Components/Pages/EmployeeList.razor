@@ -1,0 +1,27 @@
+﻿@page "/employeelist"
+
+<h3>Employee List</h3>
+
+<div class="employee-list">
+    @foreach (var employee in Employees)
+    {
+        <EmployeeCard FullName="@employee.FullName" EmployeeId="@employee.EmployeeId" Email="@employee.Email" />
+    }
+</div>
+
+@code {
+    public class Employee
+    {
+        public string FullName { get; set; }
+        public int EmployeeId { get; set; }
+        public string Email { get; set; }
+    }
+
+    List<Employee> Employees = new List<Employee>
+    {
+        new Employee { FullName = "Orville Mckee", EmployeeId = 10001, Email = "orville.mckee@example.com" },
+        new Employee { FullName = "Deb Wiley", EmployeeId = 20002, Email = "deb.wiley@example.com" },
+        new Employee { FullName = "Jeri Good", EmployeeId = 30003, Email = "jeri.good@example.com" },
+        new Employee { FullName = "Ottorino Bruni", EmployeeId = 40003, Email = "ottorino.bruni@example.com" },
+    };
+}
